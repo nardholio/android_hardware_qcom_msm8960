@@ -42,45 +42,50 @@ struct msm_rotator_buf_sync {
  int rel_fen_fd;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
+struct rot_buf_type {
+ struct ion_handle *ihdl;
+ uint32_t write_addr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ uint32_t read_addr;
+};
 struct msm_rotator_img_info {
  unsigned int session_id;
- struct msmfb_img src;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ struct msmfb_img src;
  struct msmfb_img dst;
  struct mdp_rect src_rect;
  unsigned int dst_x;
- unsigned int dst_y;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int dst_y;
  unsigned char rotations;
  int enable;
  unsigned int downscale_ratio;
- unsigned int secure;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int secure;
 };
 struct msm_rotator_data_info {
  int session_id;
- struct msmfb_data src;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ struct msmfb_data src;
  struct msmfb_data dst;
  unsigned int version_key;
  struct msmfb_data src_chroma;
- struct msmfb_data dst_chroma;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ struct msmfb_data dst_chroma;
  uint32_t wait_for_finish;
 };
 struct msm_rot_clocks {
- const char *clk_name;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ const char *clk_name;
  enum rotator_clk_type clk_type;
  unsigned int clk_rate;
 };
-struct msm_rotator_platform_data {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+struct msm_rotator_platform_data {
  unsigned int number_of_clocks;
  unsigned int hardware_version_number;
  struct msm_rot_clocks *rotator_clks;
- char rot_iommu_split_domain;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ char rot_iommu_split_domain;
 };
 #endif
-
